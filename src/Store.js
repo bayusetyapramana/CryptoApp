@@ -14,7 +14,8 @@ import RootReducer from './Reducers';
 
 const middleware = applyMiddleware (thunk, promise, logger);
 
-const store = createStore(
+const Store = createStore (
+  RootReducer,
   compose(
     middleware,
     devTools({
